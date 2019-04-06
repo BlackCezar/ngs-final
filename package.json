@@ -1,0 +1,21 @@
+{
+  "name": "ngs-final",
+  "version": "1.0.0",
+  "description": "Some project",
+  "main": "app.js",
+  "devDependencies": {
+    "electron": "^4.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron app.js"
+  },
+  "build": {
+    "appId": "ru.ngs-final.app",
+    "productName": "ngs-final",
+    "target": "nsis",
+    "icon": "./assets/icon256.ico"
+  },
+  "author": "Doctor Maxin",
+  "license": "ISC"
+}

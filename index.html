@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NGS</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+            <h1>Изменение репутации</h1>
+        
+            <div class="row">
+                <span>Выберите домен: </span>
+                <select id="domen">
+                    <option value="https://newsapi.ngs.ru/v1/pages/jtnews/comments/?regionId=54&recordId=">ngs.ru</option>
+                    <option value="https://newsapi.ngs24.ru/v1/pages/jtnews/comments/?regionId=24&recordId=">ngs24.ru</option>            
+                </select>
+            </div>
+            <div class="row">
+                <span>Введите номер поста</span>
+                <input type="number" id="recordId">
+                <button id="getComments">Загрузить комментарии</button>
+                <div class="loader"></div>
+            </div>
+            <div class="row">
+                <span>Доступно аккаунтов: </span><span class="aviable">0</span><button onclick="ipcRend.send('getAccs')">Перезагрузить аккаунты</button>
+            </div>
+            <div class="row">
+                <input type="search" placeholder="Поиск" class="search"><button onclick="filter()">Найти</button>
+            </div>
+            <div class="row">
+                <div class="error"></div>
+            </div>
+    </header>
+    <div class="comments">
+    </div>
+
+
+    <script src="assets/index.js"></script>
+</body>
+</html>
